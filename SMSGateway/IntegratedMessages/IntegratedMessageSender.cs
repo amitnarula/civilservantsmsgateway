@@ -13,6 +13,7 @@ namespace IntegratedMessages
         private const string TEMPLT_1 = "Dear User, Guest House booked successfully XXXXXX.";
         private const string TEMPLT_2 = "Dear User, Your are allotted Quarter XXXXX.";
         private const string TEMPLT_3 = "Dear User, Below are your login details. XXXXX";
+        private const string TEMPLT_4 = "Dear User, Your OTP to recover accont is XXXXX";
         private const string API_KEY = "Abbc9c3910404e5e50ddb835d877fb281";
         private const string SENDER_ID = "EMASAG";
 
@@ -29,6 +30,9 @@ namespace IntegratedMessages
                     break;
                 case "QUARTER_ALLOTTED":
                     templateType = TEMPLT_2.Replace("XXXXX",value);
+                    break;
+                case "RECOVER_PASSWORD":
+                    templateType = TEMPLT_4.Replace("XXXXX", value);
                     break;
                 default:
                     throw new ArgumentNullException("template");
